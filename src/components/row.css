@@ -1,4 +1,6 @@
-
+.app__row{
+    margin-bottom: 7vh;
+}
 .row__posters{
     display: flex;
     overflow-y: hidden;

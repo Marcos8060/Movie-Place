@@ -25,8 +25,8 @@ function Cto() {
         backgroundSize: "cover",
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundPosition: "center center",
-        objectFit: "cover",
-        height: "400px",
+        objectFit: "contain",
+        height: "470px",
         position: "relative",
       }}
     >

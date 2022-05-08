@@ -18,7 +18,7 @@ function Row({ title,fetchUrl,isLargeRow}) {
   return (
     <>
      <div className="app__row">
-         <h2 className='text-center mt-4 mb-4'>{title}</h2>
+         <h2 className='mt-4 mb-4'>{title}</h2>
 
          <div className="row__posters">
             {movies.map((movie)=>(

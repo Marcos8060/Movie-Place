@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import requests from "../requests";
-import axios from "../axios";
-import "./hero.css";
+import React, { useEffect, useState } from 'react'
+import requests from '../requests'
+import axios from '../axios'
 
-function Hero() {
-  const [movie, setMovie] = useState([]);
+function Cto() {
+    const [movie,setMovies] = useState([])
 
-  useEffect(() => {
-    async function getMovies() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
-      setMovie(
-        request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
-        ]
-      );
-      return request;
-    }
-    getMovies();
-  }, []);
+    useEffect(() =>{
+        async function getMovies(){
+            const request = await axios.get(requests.fetchNetflixOriginals);
+            setMovies(request.data.results[
+                Math.floor(Math.random() * request.data.results.length - 1)
+            ])
+            return request
+        }
+        getMovies();
+    },[])
+    console.log(movie)
   return (
-    <header
+
+    <>
+      <header
       className="hero"
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundPosition: "center center",
         objectFit: "cover",
-        height: "490px",
+        height: "400px",
         position: "relative",
       }}
     >
@@ -42,7 +42,8 @@ function Hero() {
       </div>
       <div className="banner--fadeBottom" />
     </header>
-  );
+    </>
+  )
 }
 
-export default Hero;
+export default Cto

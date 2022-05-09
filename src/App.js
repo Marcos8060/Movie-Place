@@ -8,7 +8,7 @@ function App() {
   return (
     <>
      <Hero />
-     <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} isLargeRow={true}/>
+     <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} isLargeRow={true}/>
      <Row title="Trending now" fetchUrl={requests.fetchTrending}/>
      <Cto />
      <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
@@ -18,7 +18,7 @@ function App() {
          isLargeRow={true}/>
      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
      <Cto />
-     <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} isLargeRow={true}/>
+     <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} isLargeRow={true}/>
      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow={true}/>
      <Cto />

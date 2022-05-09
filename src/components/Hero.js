@@ -3,12 +3,14 @@ import requests from "../requests";
 import axios from "../axios";
 import "./hero.css";
 
+
+const base_url = 'https://image.tmdb.org/t/p/original/'
 function Hero() {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
-      const request = await axios.get(requests.fetchActionMovies);
+      const request = await axios.get(requests.fetchHorrorMovies);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)

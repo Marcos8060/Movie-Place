@@ -8,7 +8,8 @@ function Hero() {
 
   useEffect(() => {
     async function getMovies() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+    //   const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(requests.fetchActionMovies);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -18,6 +19,7 @@ function Hero() {
     }
     getMovies();
   }, []);
+  console.log(movie)
   return (
     <header
       className="hero"
@@ -26,7 +28,7 @@ function Hero() {
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundPosition: "center center",
         objectFit: "cover",
-        height: "490px",
+        height: "640px",
         position: "relative",
       }}
     >

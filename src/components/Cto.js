@@ -15,7 +15,6 @@ function Cto() {
         }
         getMovies();
     },[])
-    console.log(movie)
   return (
 
     <>

@@ -8,7 +8,6 @@ function Hero() {
 
   useEffect(() => {
     async function getMovies() {
-    //   const request = await axios.get(requests.fetchNetflixOriginals);
       const request = await axios.get(requests.fetchActionMovies);
       setMovie(
         request.data.results[

@@ -20,7 +20,7 @@ function App() {
      <Cto />
      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} isLargeRow={true}/>
      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
-     <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/>
+     <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow={true}/>
      <Cto />
     </>
   );

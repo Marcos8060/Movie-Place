@@ -7,7 +7,7 @@ function Cto() {
 
     useEffect(() =>{
         async function getMovies(){
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests.fetchHorrorMovies);
             setMovies(request.data.results[
                 Math.floor(Math.random() * request.data.results.length - 1)
             ])
